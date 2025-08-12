@@ -1,0 +1,17 @@
+.btn {
+	padding: 5px 15px;
+	background-color: lightgreen;
+	border-radius: 10px;
+	border: none;
+	font-size: 12px;
+	font-weight: 700;
+}
+#clickMeThree {
+	padding: 5px 20px;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 12px;
+	border-radius: 10px;
+	background-color: whitesmoke;
+	border: 1px solid black;
+}
