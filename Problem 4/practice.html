@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practice</title>
-</head>
-<body>
-    
-</body>
-</html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Practice</title>
+	</head>
+	<body>
+		<div>
+			<p id="name-display"></p>
+		</div>
+	</body>
 
+	<script>
+		let myName = "Samiul";
+		document.getElementById("name-display").innerText = myName;
+		const cartValue = 100;
+		console.log("Cart value is: " + cartValue);
+		const gst = 0.18;
+		let totalAmount = cartValue + cartValue * gst;
+		console.log("Total amount including GST is: " + totalAmount);
+
+		console.log("Final amount to be paid is: " + totalAmount);
+
+		console.log(eval(2 + 3 + 5 * 9 + 6));
+	</script>
 </html>
