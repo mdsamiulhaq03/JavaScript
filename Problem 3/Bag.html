@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="bag.css" />
+		<title>Bag</title>
+	</head>
+
+	<body>
+		<button
+			class="add-button"
+			onclick="cartQuantity++;
+          document.getElementById('cart-status').innerText = `Your Bag has ${cartQuantity} items`;"
+		>
+			Add Item to Bag
+		</button>
+		<button
+			class="wish-button"
+			onclick="cartQuantity--;
+          document.getElementById('cart-status').innerText = `Your Bag has ${cartQuantity} items`;"
+		>
+			Move to Wishlist
+		</button>
+		<button
+			class="add-button"
+			onclick="cartQuantity+=2;
+          document.getElementById('cart-status').innerText = `Your Bag has ${cartQuantity} items`;"
+		>
+			Add 1+1 Sell Item
+		</button>
+
+		<h1 id="cart-status">Your Bag has 0 items</h1>
+
+		<script>
+			let cartQuantity = 0;
+			document.getElementById(
+				"cart-status"
+			).innerText = `Your Bag has ${cartQuantity} items`;
+		</script>
+	</body>
+</html>
