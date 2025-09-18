@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Object</title>
+	</head>
+	<body>
+		<script>
+			// // Create an object
+			// let product = {
+			// 	company: "Apple",
+			// 	price: 999,
+			// 	item_name: "iPhone 14 Pro Max",
+			// 	color: "Space Black",
+			// };
+			// console.log(product);
+			// console.log(typeof product); // object
+			// //Accessing Object Properties Dot Notation
+			// // console.log(product.company);
+			// // console.log(product.price);
+			// // console.log(product.item_name);
+			// // console.log(product.color);
+			// // product.company = "Bannana";
+			// // console.log(product);
+
+			// //Accessing Object Properties Bracket Notation
+
+			// console.log(product);
+			// delete product.company;
+			// console.log(product);
+
+			// //Inside Object
+
+			// let product = {
+			// 	company: "Mango",
+			// 	price: 500,
+			// 	item_Name: "Tshirt",
+			// 	displayPrice: function () {
+			// 		console.log(`Price of The ${this.item_Name} is $${this.price}`);
+			// 	},
+			// };
+
+			// product.displayPrice();
+
+			// console.log("Hello World".toUpperCase());
+			// console.log("Hello World".replace("World", "JavaScript"));
+
+			//Object References
+
+			// let a = 5;
+			// let b = a;
+			// console.log(`a=${a},b=${b}`);
+			// a = 8;
+			// console.log(`a=${a},b=${b}`);
+			// let x = { value: 5 };
+			// let y = x;
+			// console.log(`x=${x.value},y=${y.value}`);
+			// x.value = 8;
+			// console.log(`x=${x.value},y=${y.value}`);
+
+			// //Object ShortCut
+
+			let product = {
+				company: "Mango",
+				price: 500,
+				item_Name: "Tshirt",
+				displayPrice() {
+					console.log(`Price of The ${this.item_Name} is $${this.price}`);
+				},
+			};
+
+			let { company, price } = product;
+			console.log(company);
+			console.log(price);
+		</script>
+	</body>
+</html>

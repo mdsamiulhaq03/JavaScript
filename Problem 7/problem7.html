@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Problem 7</title>
+	</head>
+	<body>
+		<script>
+			let product = {
+				name: "Jeans",
+				size: "small",
+				fit: "Slim",
+				price: 2000,
+				"deliver-time": "5-7 days",
+			};
+			// // let copyProduct = { ...product };
+			// // console.log(product);
+			// // copyProduct.size = "Medium";
+			// // console.log("After changing size in copyProduct", copyProduct);
+			// console.log(product["deliver-time"]);
+
+			let obj = { message: "Good Job", status: "Completed" };
+			let { message, status } = obj;
+			console.log(message, status);
+
+			function isIdentical(obj1, obj2) {
+				if (obj1 === obj2) {
+					return true;
+				}
+
+				if (
+					typeof obj1 !== "object" ||
+					obj1 === null ||
+					typeof obj2 !== "object" ||
+					obj2 === null
+				) {
+					console.warn("Not an object or null");
+					return false;
+				}
+			}
+		</script>
+	</body>
+</html>
