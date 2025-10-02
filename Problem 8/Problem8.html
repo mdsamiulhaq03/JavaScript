@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 8</title>
+</head>
+<body>
+    <h1 id="greeting"></h1>
+    <button id="countBtn" style="padding:10px 20px; font-size:16px;">Pressed 0 times</button>
+    <script>
+    // window.onload = function() {
+    //     const hour = new Date().getHours();
+    //     let greeting = '';
+    //     if (hour >= 5 && hour < 12) {
+    //         greeting = 'Good Morning';
+    //     } else if (hour >= 12 && hour < 18) {
+    //         greeting = 'Good Afternoon';
+    //     } else {
+    //         greeting = 'Good Night';
+    //     }
+    //     document.getElementById('greeting').textContent = 'Samiul - ' + greeting;
+
+        // Button counter logic
+        // Load count from localStorage if available
+        let count = parseInt(localStorage.getItem('pressCount')) || 0;
+        const btn = document.getElementById('countBtn');
+
+        function handleButtonEvent(event) {
+            // If this is a click event, increment count and store
+            if (event && event.type === 'click') {
+                count++;
+                localStorage.setItem('pressCount', count);
+            }
+            // Update button text and color
+            btn.textContent = `Pressed ${count} times`;
+            if (count % 2 === 0) {
+                btn.style.backgroundColor = '#4CAF50'; // green for even
+                btn.style.color = 'white';
+            } else {
+                btn.style.backgroundColor = '#f44336'; // red for odd
+                btn.style.color = 'white';
+            }
+        }
+
+        btn.addEventListener('click', handleButtonEvent);
+        // Set initial color and text
+        handleButtonEvent();
+    ;
+    </script>
+</body>
+</html> 
